@@ -1,6 +1,20 @@
 const CLIENT_ID = document.querySelector('#scaledrone_api').dataset.name;
 const NAME = document.querySelector('#name').dataset.name;
 
+function waitForElement(elementId, callBack){
+  window.setTimeout(function(){
+    var element = document.getElementById(elementId);
+    if(element){
+      callBack(elementId, element);
+    }else{
+      waitForElement(elementId, callBack);
+    }
+  },500)
+}
+
+waitForElement("scaledrone_api",function(){
+    console.log('here')
+console.log(CLIENT_ID)
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
     name: NAME,
@@ -8,7 +22,6 @@ const drone = new ScaleDrone(CLIENT_ID, {
   },
 });
 
-let members = [];
 
 drone.on('open', error => {
   if (error) {
@@ -59,6 +72,9 @@ drone.on('close', event => {
 drone.on('error', error => {
   console.error(error);
 });
+
+let members = [];
+
 
 
 function getRandomColor() {
@@ -124,3 +140,7 @@ function addMessageToListDOM(text, member) {
     el.scrollTop = el.scrollHeight - el.clientHeight;
   }
 }
+
+
+});
+
