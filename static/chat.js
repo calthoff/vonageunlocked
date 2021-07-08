@@ -1,20 +1,6 @@
-const CLIENT_ID = document.querySelector('#scaledrone_api').dataset.name;
+const CLIENT_ID = 'O3QmXmldCTQ8HXWp'
 const NAME = document.querySelector('#name').dataset.name;
 
-function waitForElement(elementId, callBack){
-  window.setTimeout(function(){
-    var element = document.getElementById(elementId);
-    if(element){
-      callBack(elementId, element);
-    }else{
-      waitForElement(elementId, callBack);
-    }
-  },500)
-}
-
-waitForElement("scaledrone_api",function(){
-    console.log('here')
-console.log(CLIENT_ID)
 const drone = new ScaleDrone(CLIENT_ID, {
   data: { // Will be sent out as clientData via events
     name: NAME,
@@ -142,5 +128,5 @@ function addMessageToListDOM(text, member) {
 }
 
 
-});
+
 

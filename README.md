@@ -19,7 +19,6 @@ https://dashboard.scaledrone.com/signup<br>
 <code> nano .env </code><br>
 <code>API_KEY = 'Your OpenTok API Key` </code><br>
 <code>API_SECRET = 'Your OpenTok API Secret</code><br>
-<code>SCALEDRONE_API' = 'Your SCALEDRONE_API API
 </code>
 
 <h3>Run app.py </h3>
