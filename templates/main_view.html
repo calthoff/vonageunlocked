@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+</head>
+<body>
+  <div id="api_key" data-name="{{api_key}}"></div>
+  <div id="session_id" data-name="{{session_id}}"></div>
+  <div id="token" data-name="{{token}}"></div>
+  <div id="name" data-name="{{name}}"></div>
+  <div id="scaledrone_api" data-name="{{scaledrone_api}}"></div>
+  <video id="v1" width="320" height="240" autoplay></video>
+  <canvas id="c1" width="320" height="240"></canvas>
+  <canvas id="c2" width="320" height="240"></canvas>
+  <div id="opentok-publishers"></div>
+  <div id="opentok-subscribers"></div>
+  <div class="messages"></div>
+  <form class="message-form" onsubmit="return false;">
+    <input class="message-form__input" placeholder="Type a message.." type="text"/>
+    <input class="message-form__button" value="Send" type="submit"/>
+  </form>
+  {% if is_admin %}
+       <script src="./admin_video.js"></script>
+  {% else %}
+      <script src="./viewer_video.js"></script>
+  {% endif %}
+  <script src="./chat.js"></script>
+</body>
+</html>
