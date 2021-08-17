@@ -2,20 +2,36 @@
 
 <head>
     <style>
-        body {background-color: coral;}
+        body {background-color: coral;
+        text-align: center;
+
+        }
+        #submit {
+              background-color: black;
+              border: none;
+              color: white;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+            }
+        input {
+            width: 20%;
+            height: 50px;
+        }
     </style>
 </head>
 <html>
 <body>
-
+<br><br><br>
 <h1> Welcome! </h1>
-<h3>What is your name admin?</h3>
+<h2>What is your name admin?</h2>
 
 <form action="/" method="post">
-  <label for="admin">Your name:</label><br>
   <input type="text" id="admin" name="admin" hidden><br>
-  <input type="text" id="name" name="name"><br>
-  <input type="submit" value="Submit">
+  <input type="text" id="name" name="name" placeholder="Your name"><br><br>
+  <input type="submit" value="Submit" id="submit">
 </form>
 </body>
 </html>
