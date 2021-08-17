@@ -9,10 +9,6 @@
 <code>pip install requirements.txt</code>
 <h3>Create a free OpenTok account and get API key and secret </h3>
 https://tokbox.com/account/user/signup <br>
-coupon: 21UNLX7359
-
-<h3>Create a free Scaledrone account and get API key </h3>
-https://dashboard.scaledrone.com/signup<br>
 
 <h3>Set Environmental Variables inside your vonage_unlocked directory</h3>
 <code> touch .env </code> <br>
