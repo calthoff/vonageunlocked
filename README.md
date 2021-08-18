@@ -6,7 +6,7 @@
 <code>source venv/bin/activate</code>
 
 <h3>Install dependencies </h3>
-<code>pip3 install requirements.txt</code>
+<code>pip3 install -r requirements.txt</code>
 <h3>Create a free OpenTok account and get API key and secret </h3>
 https://tokbox.com/account/user/signup <br>
 
