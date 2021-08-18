@@ -11,10 +11,9 @@
 https://tokbox.com/account/user/signup <br>
 
 <h3>Set Environmental Variables inside your vonage_unlocked directory</h3>
-<code> touch .env </code> <br>
-<code> nano .env </code><br>
+<code> vim .env </code> <br>
 <code>API_KEY = 'Your OpenTok API Key` </code><br>
-<code>API_SECRET = 'Your OpenTok API Secret</code><br>
+<code>API_SECRET = 'Your OpenTok API Secret'</code><br>
 </code>
 
 <h3>Run app.py </h3>
